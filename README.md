@@ -1,6 +1,6 @@
 # Daily Journal Blog
 
-This is the publish-only companion to `~/daily driver`. Journal entries are
+This is the publish-only companion to `~/1playground/1daily-driver`. Journal entries are
 written through `today notes` and exported here only when **Publish to blog** or
 `today publish` is used.
 
