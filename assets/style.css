@@ -1,0 +1,118 @@
+:root {
+  color-scheme: light dark;
+  --paper: #fbfaf7;
+  --ink: #282724;
+  --muted: #77736b;
+  --rule: #d9d4c9;
+  --accent: #69558f;
+  --content: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1d1c1a;
+    --ink: #ece8df;
+    --muted: #aaa398;
+    --rule: #454139;
+    --accent: #c4a7e7;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 18px/1.7 ui-serif, Georgia, serif;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+
+.site-header,
+.site-footer,
+main {
+  width: min(var(--content), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--rule);
+  font: 700 .82rem/1.2 ui-sans-serif, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.site-header a { color: var(--ink); text-decoration: none; }
+
+main { min-height: calc(100vh - 180px); }
+
+.home,
+.journal-entry { padding: 64px 0 90px; }
+
+h1 {
+  margin: 6px 0 10px;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font: 700 .78rem/1.2 ui-sans-serif, sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.intro,
+.journal-entry time,
+.empty {
+  color: var(--muted);
+}
+
+.post-list {
+  margin: 52px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.post-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-list a { color: var(--ink); font-weight: 700; }
+.post-list time { color: var(--muted); white-space: nowrap; }
+
+.journal-entry > header {
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.entry-content h2 {
+  margin: 42px 0 8px;
+  color: var(--accent);
+  font: 700 .8rem/1.2 ui-sans-serif, sans-serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.entry-content p { white-space: pre-wrap; }
+
+.site-footer {
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font: .82rem/1.4 ui-sans-serif, sans-serif;
+}
+
+@media (max-width: 560px) {
+  .home, .journal-entry { padding-top: 44px; }
+  .post-list li { flex-direction: column; gap: 4px; }
+}

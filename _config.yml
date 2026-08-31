@@ -1,0 +1,19 @@
+title: Daily Journal
+description: Notes, decisions, and follow-ups from the daily driver.
+url: ""
+baseurl: ""
+timezone: America/Chicago
+permalink: /journal/:year/:month/:day/
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
